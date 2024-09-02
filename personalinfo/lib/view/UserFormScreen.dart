@@ -66,13 +66,13 @@ class _UserFormScreenState extends State<UserFormScreen> {
               children: [
                 TextFormField(
                   initialValue: name,
-                  decoration: InputDecoration(labelText: 'Name'),
+                  decoration: InputDecoration(labelText: 'Name',hintText: 'Enter Your Name'),
                   validator: (value) => value!.isEmpty ? 'Enter Name' : null,
                   onSaved: (value) => name = value!,
                 ),
                 TextFormField(
                   initialValue: age.toString(),
-                  decoration: InputDecoration(labelText: 'Age'),
+                  decoration: InputDecoration(labelText: 'Age',hintText: 'Enter Your Age 0 to 99'),
                   keyboardType: TextInputType.number,
                   validator: (value) =>
                       value!.isEmpty ? 'Enter Age 0 to 99' : null,
@@ -80,13 +80,16 @@ class _UserFormScreenState extends State<UserFormScreen> {
                 ),
                 TextFormField(
                   initialValue: email,
-                  decoration: InputDecoration(labelText: 'Email'),
+                  decoration: InputDecoration(labelText: 'Email',hintText: 'Enter your email e.g: tejeshvi@cdac.in'),
                   validator: (value) => value!.isEmpty ? 'Enter Email' : null,
                   onSaved: (value) => email = value!,
                 ),
                 TextFormField(
                   initialValue: dob,
-                  decoration: InputDecoration(labelText: 'DOB'),
+                  decoration: InputDecoration(
+                    labelText: 'DOB',
+                    hintText: 'DD-MM-YYYY',
+                  ),
                   validator: (value) => value!.isEmpty
                       ? 'Enter DOB in format DD-MM-YYYY format'
                       : null,
@@ -94,20 +97,20 @@ class _UserFormScreenState extends State<UserFormScreen> {
                 ),
                 TextFormField(
                   initialValue: employmentStatus,
-                  decoration: InputDecoration(labelText: 'Employment Status'),
+                  decoration: InputDecoration(labelText: 'Employment Status', hintText: 'current company name'),
                   validator: (value) =>
                       value!.isEmpty ? 'Enter Employment Status' : null,
                   onSaved: (value) => employmentStatus = value!,
                 ),
                 TextFormField(
                   initialValue: address,
-                  decoration: InputDecoration(labelText: 'Address'),
+                  decoration: InputDecoration(labelText: 'Address' ,hintText: 'Enter Your City'),
                   validator: (value) => value!.isEmpty ? 'Enter Address' : null,
                   onSaved: (value) => address = value!,
                 ),
                 TextFormField(
                   initialValue: gender,
-                  decoration: InputDecoration(labelText: 'Gender'),
+                  decoration: const InputDecoration(labelText: 'Gender', hintText: 'Enter Your Gender  e.g :Female'),
                   validator: (value) => value!.isEmpty ? 'Enter Gender' : null,
                   onSaved: (value) => gender = value!,
                 ),
