@@ -74,7 +74,8 @@ class _UserFormScreenState extends State<UserFormScreen> {
                   initialValue: age.toString(),
                   decoration: InputDecoration(labelText: 'Age'),
                   keyboardType: TextInputType.number,
-                  validator: (value) => value!.isEmpty ? 'Enter Age' : null,
+                  validator: (value) =>
+                      value!.isEmpty ? 'Enter Age 0 to 99' : null,
                   onSaved: (value) => age = int.parse(value!),
                 ),
                 TextFormField(
@@ -86,7 +87,9 @@ class _UserFormScreenState extends State<UserFormScreen> {
                 TextFormField(
                   initialValue: dob,
                   decoration: InputDecoration(labelText: 'DOB'),
-                  validator: (value) => value!.isEmpty ? 'Enter DOB' : null,
+                  validator: (value) => value!.isEmpty
+                      ? 'Enter DOB in format DD-MM-YYYY format'
+                      : null,
                   onSaved: (value) => dob = value!,
                 ),
                 TextFormField(
